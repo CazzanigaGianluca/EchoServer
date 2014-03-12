@@ -33,11 +33,9 @@ public class EchoThread extends Thread {
                         out.println(str);
                         break;
                     case "fine":
-                        out.close();
+                        s.close();
                         break;
-                    case "FINE":
-                        out.close();
-                        break;
+
                     default:
                         if(flag==0){
                             out.println(str);
