@@ -23,19 +23,17 @@ public class EchoThread extends Thread {
             while (true) {
                 String str=in.readLine();
                 switch (str) {
-                    case "maiuscolo on":
+                    case "maiuscole: on":
                         flag=1;
-                        str=str.toUpperCase();
-                        out.println(str);
+                        out.println("Comando ricevuto: "+str);
                         break;
-                    case "maiuscolo off":
+                    case "maiuscole: off":
                         flag=0;
-                        out.println(str);
+                        out.println("Comando ricevuto: "+str);
                         break;
                     case "fine":
                         s.close();
                         break;
-
                     default:
                         if(flag==0){
                             out.println(str);
@@ -47,7 +45,6 @@ public class EchoThread extends Thread {
                 }
             }
         } catch (IOException ex) {
-            Logger.getLogger(EchoThread.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
